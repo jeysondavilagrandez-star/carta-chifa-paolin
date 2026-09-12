@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff8f0;
+        color: #222;
+    }
+}
+
+    .portada {
+        position: relative;
+        width: 100%;
+        height: 420px;
+        overflow: hidden;
+    }
+
+    .imagen-portada {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .portada::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+    }
+
+    .contenido-portada {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 1;
+        width: 90%;
+    }
+
+        .contenido-portada h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+        }
+
+        .contenido-portada p {
+            font-size: 24px;
+        }
+
+    main {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+        main h2 {
+            color: #b30000;
+            margin-bottom: 10px;
+        }
+
+        main p {
+            font-size: 18px;
+        }
+
+    .categorias {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 18px 20px;
+        background-color: #8f0000;
+    }
+
+        .categorias a {
+            text-decoration: none;
+            color: white;
+            background-color: #c40000;
+            padding: 10px 16px;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+            .categorias a:hover {
+                background-color: #f4b400;
+                color: #7a0000;
+            }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .contenedor {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .seccion-menu {
+        background: white;
+        border-radius: 18px;
+        padding: 30px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .titulo-seccion {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+        .titulo-seccion h2 {
+            display: inline-block;
+            background-color: #c40000;
+            color: white;
+            border: 3px solid #f4b400;
+            border-radius: 12px;
+            padding: 10px 50px;
+            font-size: 32px;
+        }
+
+    .informacion-menu {
+        text-align: center;
+        color: #8f0000;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .aviso-menu {
+        text-align: center;
+        background-color: #f4b400;
+        color: #7a0000;
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+
+    .lista-platos {
+        width: 100%;
+    }
+
+    .plato {
+        display: grid;
+        grid-template-columns: 45px 1fr auto;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 0;
+        border-bottom: 1px dashed #cccccc;
+    }
+
+    .numero {
+        background-color: #c40000;
+        color: white;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+
+    .nombre {
+        font-size: 17px;
+    }
+
+    .precio {
+        color: #b30000;
+        font-size: 17px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+
+        .contenedor {
+            margin: 20px auto;
+            padding: 0 12px;
+        }
+
+        .seccion-menu {
+            padding: 20px 15px;
+        }
+
+        .titulo-seccion h2 {
+            font-size: 26px;
+            padding: 8px 35px;
+        }
+
+        .informacion-menu {
+            font-size: 15px;
+        }
+
+        .plato {
+            grid-template-columns: 38px 1fr auto;
+            gap: 7px;
+        }
+
+        .numero {
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+        }
+
+        .nombre,
+        .precio {
+            font-size: 15px;
+        }
+    }
+
+    #caldos .plato {
+        grid-template-columns: 1fr auto;
+    }
+
+    #caldos {
+        margin-top: 35px;
+    }
+
+    #tallarines .plato {
+        grid-template-columns: 1fr auto;
+    }
+
+    #tallarines {
+        margin-top: 35px;
+    }
+
+    #tortilla .plato {
+        grid-template-columns: 1fr auto;
+    }
+
+    #tortilla {
+        margin-top: 35px;
+    }
+
+    #chaufa .plato {
+        grid-template-columns: 1fr auto;
+    }
+
+    #chaufa {
+        margin-top: 35px;
+    }
+
+    #chancho .plato {
+        grid-template-columns: 1fr auto;
+    }
+
+    #chancho {
+        margin-top: 35px;
+    }
+
+    #pollos .plato {
+        grid-template-columns: 1fr auto;
+    }
+
+    #pollos {
+        margin-top: 35px;
+    }
+
+    #agridulces .plato {
+        grid-template-columns: 1fr auto;
+    }
+
+    #agridulces {
+        margin-top: 35px;
+    }
+
+    #langostinos .plato {
+        grid-template-columns: 1fr auto;
+    }
+
+    #langostinos {
+        margin-top: 35px;
+    }
+
+    #pato .plato {
+        grid-template-columns: 1fr auto;
+    }
+
+    #pato {
+        margin-top: 35px;
+    }
+
+    #paolin .plato {
+        grid-template-columns: 1fr auto;
+    }
+
+    #paolin {
+        margin-top: 35px;
+    }
+
+    #res .plato {
+        grid-template-columns: 1fr auto;
+    }
+
+    #res {
+        margin-top: 35px;
+    }
+
+    #extras {
+        margin-top: 35px;
+    }
+
+    .extras-encabezado {
+        display: grid;
+        grid-template-columns: 1fr 100px 100px;
+        gap: 10px;
+        text-align: center;
+        margin-bottom: 8px;
+        color: #b30000;
+        font-size: 18px;
+    }
+
+        .extras-encabezado strong {
+            background-color: #f4b400;
+            padding: 7px;
+            border-radius: 8px;
+        }
+
+    .plato-extra {
+        display: grid;
+        grid-template-columns: 1fr 100px 100px;
+        gap: 10px;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px dashed #ccc;
+    }
+
+        .plato-extra span:nth-child(2),
+        .plato-extra span:nth-child(3) {
+            text-align: center;
+            color: #b30000;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+    @media (max-width: 600px) {
+
+        .extras-encabezado,
+        .plato-extra {
+            grid-template-columns: 1fr 70px 70px;
+            gap: 5px;
+            font-size: 13px;
+        }
+
+        .extras-encabezado {
+            font-size: 14px;
+        }
+    }
+
+    #bebidas {
+        margin-top: 35px;
+    }
+
+        #bebidas .plato {
+            grid-template-columns: 1fr auto;
+        }
+
+    .bloque-bebidas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .grupo-bebidas h3 {
+        text-align: center;
+        color: #b30000;
+        background-color: #f4b400;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 700px) {
+
+        .bloque-bebidas {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
